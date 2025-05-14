@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* border: 1px solid; */
+    }
+
+    .head {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        padding: 1px;
+    }
+
+    .nav {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        /* border: 1px solid black; */
+        z-index: 1;
+        margin-top: 0px;
+        left: 0;
+    }
+
+    .logo {
+        width: 165px;
+        height: auto;
+        /* border: 1px solid black; */
+        margin-top: 20px;
+        margin-left: 30px;
+        font-size: 17px;
+        font-weight: 700;
+
+    }
+
+    #span1 {
+        font-weight: 500;
+        margin-left: 10px;
+    }
+
+    .nav1 {
+        width: 370px;
+        height: auto;
+        /* border: 1px solid black; */
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+
+    .nav li {
+        display: inline-block;
+        margin-left: 30px;
+        color: black;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .logo,
+    .nav1 {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .img {
+        position: relative;
+        width: 100%;
+        height: auto
+            /* border: 1px solid black; */
+
+    }
+
+    .img1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .header {
+        width: 22%;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* border: 1px solid black; */
+        position: absolute;
+    }
+
+    .he1 {
+        width: 80px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.67);
+        display: inline-block;
+    }
+
+    .br {
+        width: 100%;
+        height: auto;
+        font-size: 34px;
+        color: rgba(255, 255, 255, 0.933);
+        text-align: center;
+        font-weight: bold;
+        padding-top: 9px;
+    }
+
+    .arti {
+        width: 220px;
+        height: auto;
+        font-size: 30px;
+        font-weight: 400;
+        color: white;
+        padding-top: -5px;
+        display: inline-block;
+    }
+
+    .sec1 {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        /* border: 1px solid black; */
+        padding: 1px;
+    }
+
+    .projects {
+        width: 120px;
+        height: auto;
+        font-size: 25px;
+        font-weight: 400;
+        color: black;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+
+    .images {
+        width: 93%;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+        position: relative;
+        /* border: 1px solid black; */
+    }
+
+    .images1 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+    }
+
+    .sh {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 0;
+        top: 0;
+    }
+
+    .images2 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .bh {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 366px;
+        top: 0;
+    }
+
+    .images3 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .reno {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 50.6%;
+        top: 0;
+    }
+
+    .images4 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .brh {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 75.6%;
+        top: 0;
+    }
+
+    .images5 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-top: 6px;
+    }
+
+    .sh1 {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 0;
+        top: 242px;
+    }
+
+    .images6 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .bh1 {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 366px;
+        top: 242px;
+    }
+
+    .images7 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .reno1 {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 50.6%;
+        top: 242px;
+    }
+
+    .images8 {
+        width: 24%;
+        height: auto;
+        display: inline-block;
+        margin-left: 6px;
+    }
+
+    .brh1 {
+        width: 150px;
+        height: 35px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        padding-top: 5px;
+        left: 75.6%;
+        top: 242px;
+    }
+
+    .sec2 {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        /* border: 1px solid black; */
+        padding: 1px;
+    }
+
+    .about {
+        width: 120px;
+        height: auto;
+        font-size: 25px;
+        font-weight: 400;
+        color: black;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+
+    .paragraph {
+        width: 96%;
+        height: auto;
+        text-align: left;
+        margin: auto;
+        margin-top: 30px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.884);
+        font-weight: 500;
+    }
+
+    .about1 {
+        width: 93%;
+        height: auto;
+        /* border: 1px solid black; */
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .j {
+        width: 24%;
+        height: 440px;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .j1 {
+        width: 100%;
+        height: 220px;
+    }
+
+    .j2 {
+        width: 110px;
+        height: auto;
+        /* border: 1px solid black; */
+        font-size: 23px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.97);
+        margin-top: 10px;
+    }
+
+    .j3 {
+        width: 120px;
+        height: auto;
+        font-size: 17px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.745);
+    }
+
+    .j4 {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        font-size: 16px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .j5 {
+        width: 100%;
+        height: 35px;
+        background-color: rgba(128, 128, 128, 0.153);
+        font-size: 17px;
+        text-align: center;
+        padding-top: 4px;
+        margin-top: 10px;
+        font-weight: 500;
+
+    }
+
+    .jane {
+        width: 24%;
+        height: 440px;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 6px;
+    }
+
+    .jane1 {
+        width: 100%;
+        height: 220px;
+    }
+
+    .jane2 {
+        width: 110px;
+        height: auto;
+        /* border: 1px solid black; */
+        font-size: 23px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.97);
+        margin-top: 10px;
+    }
+
+    .jane3 {
+        width: 120px;
+        height: auto;
+        font-size: 17px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.745);
+    }
+
+    .jane4 {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        font-size: 16px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .jane5 {
+        width: 100%;
+        height: 35px;
+        background-color: rgba(128, 128, 128, 0.153);
+        font-size: 17px;
+        text-align: center;
+        padding-top: 4px;
+        margin-top: 10px;
+        font-weight: 500;
+
+    }
+
+    .mike {
+        width: 24%;
+        height: 440px;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 6px;
+    }
+
+    .mike1 {
+        width: 100%;
+        height: 220px;
+    }
+
+    .mike2 {
+        width: 110px;
+        height: auto;
+        /* border: 1px solid black; */
+        font-size: 23px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.97);
+        margin-top: 10px;
+    }
+
+    .mike3 {
+        width: 120px;
+        height: auto;
+        font-size: 17px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.745);
+    }
+
+    .mike4 {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        font-size: 16px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .mike5 {
+        width: 100%;
+        height: 35px;
+        background-color: rgba(128, 128, 128, 0.153);
+        font-size: 17px;
+        text-align: center;
+        padding-top: 4px;
+        margin-top: 10px;
+        font-weight: 500;
+
+    }
+
+    .dan {
+        width: 24%;
+        height: 440px;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 7px;
+    }
+
+    .dan1 {
+        width: 100%;
+        height: 220px;
+    }
+
+    .dan2 {
+        width: 110px;
+        height: auto;
+        /* border: 1px solid black; */
+        font-size: 23px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.97);
+        margin-top: 10px;
+    }
+
+    .dan3 {
+        width: 120px;
+        height: auto;
+        font-size: 17px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.745);
+    }
+
+    .dan4 {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        font-size: 16px;
+        color: black;
+        font-weight: 500;
+    }
+
+    .dan5 {
+        width: 100%;
+        height: 35px;
+        background-color: rgba(128, 128, 128, 0.153);
+        font-size: 17px;
+        text-align: center;
+        padding-top: 4px;
+        margin-top: 10px;
+        font-weight: 500;
+
+    }
+
+    .sec3 {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        /* border: 1px solid black; */
+        padding: 1px;
+    }
+
+    .contact {
+        width: 120px;
+        height: auto;
+        font-size: 25px;
+        font-weight: 400;
+        color: black;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+
+    .contact1 {
+        width: 40%;
+        height: auto;
+        margin-left: 33px;
+        margin-top: 30px;
+        font-size: 17px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .inp1 {
+        width: 95%;
+        height: 40px;
+        margin-left: 30px;
+        margin-top: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.268);
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    .inp2 {
+        width: 95%;
+        height: 40px;
+        margin-left: 30px;
+        margin-top: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.268);
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    .inp3 {
+        width: 95%;
+        height: 40px;
+        margin-left: 30px;
+        margin-top: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.268);
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    .inp4 {
+        width: 95%;
+        height: 40px;
+        margin-left: 30px;
+        margin-top: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.268);
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    .sendm {
+        width: 10%;
+        height: 40px;
+        background-color: black;
+        font-size: 17px;
+        color: white;
+        text-align: center;
+        padding-top: 7px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .sec4 {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        /* border: 1px solid black; */
+        padding: 1px;
+    }
+
+    .sec4-1 {
+        width: 97%;
+        height: auto;
+        /* border: 1px solid black; */
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .img2 {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .footer {
+        width: 100%;
+        height: 90px;
+        background-color: black;
+        margin-top: 10px;
+        font-size: 17px;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        padding-top: 32px;
+    }
+
+
+
+
+
+
+
+    /* //////////////////////////////////////////////////////////////////////////////////////////// */
+
+    @media screen and (max-width:900px) {
+
+        #lists {
+            display: none;
+        }
+
+        .nav {
+            width: max-content;
+        }
+
+
+
+    }
+
+    @media screen and (max-width:900px) {
+        .arti {
+            display: none;
+        }
+
+        .header {
+            width: max-content;
+        }
+
+
+    }
+
+    @media screen and (max-width: 500px) {
+        .j {
+            width: 93%;
+        }
+
+        
+    }
+
+    @media screen and (max-width:1100px) {
+        .inp1 {
+            width: max-content;
+
+        }
+        .paragraph{
+            width: 96%;
+        }
+
+        .sendm {
+            width: max-content;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .images1 {
+            width: 95%;
+        }
+
+    }
+</style>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="logo"> B R
+                <span id="span1">A r c h i t e c t s</span>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li id="lists">P r o j e c t s</li>
+                    <li id="lists">A b o u t</li>
+                    <li id="lists">C o n t a c t</li>
+                </ul>
+            </div>
+        </nav>
+        <div class="img">
+            <img class="img1" src="./responsive-1/W3.img/architect.jpg" alt="">
+            <div class="header">
+                <div class="he1">
+                    <div class="br">B R</div>
+                </div>
+                <div class="arti">A r c h i t e c t s</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="sec1">
+        <div class="projects">Projects</div>
+        <div class="images">
+            <img class="images1" src="./responsive-1/W3.img/house5.jpg" alt="">
+            <!-- <div class="sh"> Summer House</div> -->
+            <img class="images1" src="./responsive-1/W3.img/house2.jpg" alt="">
+            <!-- <div class="bh"> Brick House</div> -->
+
+            <img class="images1" src="./responsive-1/W3.img/house3.jpg" alt="">
+            <!-- <div class="reno"> Renovated</div> -->
+
+            <img class="images1" src="./responsive-1/W3.img/house4.jpg" alt="">
+            <!-- <div class="brh"> Barn House</div> -->
+
+            <img class="images1" src="./responsive-1/W3.img/house2.jpg" alt="">
+            <!-- <div class="sh1"> Summer House</div> -->
+
+
+            <img class="images1" src="./responsive-1/W3.img/house5.jpg" alt="">
+            <!-- <div class="bh1">Brick House</div> -->
+
+            <img class="images1" src="./responsive-1/W3.img/house4.jpg" alt="">
+            <!-- <div class="reno1">Renovated</div> -->
+
+            <img class="images1" src="./responsive-1/W3.img/house3.jpg" alt="">
+            <!-- <div class="brh1">Barn House</div> -->
+        </div>
+
+    </section>
+
+    <section class="sec2">
+        <div class="about">About</div>
+        <div class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<br /> laboris
+            nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do<br /> eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.</div>
+
+        <div class="about1">
+            <div class="j">
+                <img class="j1" src="./responsive-1/W3.img/team2.jpg" alt="">
+                <div class="j2">John Doe</div>
+                <div class="j3">CEO & Founder</div>
+                <div class="j4">Phasellus eget enim eu lectus faucibus<br /> vestibulum. Suspendisse sodales
+                    pellentesque<br /> elementum.</div>
+                <div class="j5">Contact</div>
+            </div>
+            <div class="j">
+                <img class="j1" src="./responsive-1/W3.img/team1.jpg" alt="">
+                <div class="j2">Jane Doe</div>
+                <div class="j3">Architect</div>
+                <div class="j4">Phasellus eget enim eu lectus faucibus<br /> vestibulum. Suspendisse sodales
+                    pellentesque<br /> elementum.</div>
+                <div class="j5">Contact</div>
+            </div>
+            <div class="j">
+                <img class="j1" src="./responsive-1/W3.img/team3.jpg" alt="">
+                <div class="j2">Mike Ross</div>
+                <div class="j3">Architect</div>
+                <div class="j4">Phasellus eget enim eu lectus faucibus<br /> vestibulum. Suspendisse sodales
+                    pellentesque<br /> elementum.</div>
+                <div class="j5">Contact</div>
+            </div>
+
+            <div class="j">
+                <img class="j1" src="./responsive-1/W3.img/team4.jpg" alt="">
+                <div class="j2">Dan Star</div>
+                <div class="j3">Architect</div>
+                <div class="j4">Phasellus eget enim eu lectus faucibus<br /> vestibulum. Suspendisse sodales
+                    pellentesque<br /> elementum.</div>
+                <div class="j5">Contact</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec3">
+        <div class="contact">Contact</div>
+        <div class="contact1">Lets get in touch and talk about your next project.</div>
+        <input class="inp1" type="text" placeholder="Name">
+        <input class="inp1" type="text" placeholder="Email">
+        <input class="inp1" type="text" placeholder="Subject">
+        <input class="inp1" type="text" placeholder="Comment">
+        <div class="sendm">SEND MESSAGE</div>
+    </section>
+    <section class="sec4">
+        <div class="sec4-1">
+            <img class="img2" src="./responsive-1/W3.img/map.jpg" alt="">
+        </div>
+        <div class="footer">Powered by w3.css</div>
+    </section>
+</body>
+
+</html>
